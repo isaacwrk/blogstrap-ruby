@@ -1,4 +1,20 @@
+<div class="min-h-screen flex flex-col items-center mt-10">
 <h1>New Article</h1>
 <%= render 'form', article: @article %>
 
-<%= link_to 'Back', root_path %>
+<div class="bg-blue-400 hover:bg-blue-600 text-white  px-5 mt-5 rounded">
+    <a href="<%= root_path %>">
+        Back
+    </a>
+</div>
+
+</div>
+
+<style>
+a:link {
+text-decoration: none;
+}
+a {
+  color: white;
+}
+</style>

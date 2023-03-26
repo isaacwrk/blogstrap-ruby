@@ -1,21 +1,23 @@
+<div class="bg-gray-300 flex px-20 min-h-52 w-3/4 justify-center rounded-md py-4">
 <%= form_with model: article do |form| %>
-    <div>
+    <div class="py-2">
     <%= form.label :title %>
     <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
-        <div><%= message %></div>
+        <div class="bg-red-200 px-1 rounded-sm  text-white"><%= message %></div>
     <% end %>
     </div>
 
-    <div>
+    <div class="py-2">
     <%= form.label :body %>
     <%= form.text_area :body %>
     <% article.errors.full_messages_for(:body).each do |message| %>
-        <div><%= message %></div>
+        <div class="bg-red-200 px-1 rounded-sm text-white"><%= message %></div>
     <% end %>
     </div>
 
-    <div>
+    <div class="bg-blue-400 rounded text-center text-white hover:bg-blue-600">
         <%= form.submit %>
     </div>
 <% end %>
+</div>
