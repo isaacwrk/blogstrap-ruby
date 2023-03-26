@@ -1,8 +1,8 @@
-<h1>Article List</h1>
+<h1 class="text-bg-primary p-3">Article List</h1>
 
 <%= link_to 'New Article', new_article_path %>
 
-<ul>
+<ul class="pr-2">
     <% @articles.each do |article|  %>
     <li>
         <%= link_to article.title, article %>
