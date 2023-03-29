@@ -1,9 +1,22 @@
+<div class=" text-center py-2 w-3/5 bg-red-200 min-h-52">
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
-<ul>
+<div>
+
+<ul >
+<div class="justify-center">
 <li><%= link_to 'Edit', edit_article_path(@article) %></li>
-<li><%= link_to 'Destroy', article_path(@article), 
-    data: { "turbo_method": :delete, turbo_confirm: "Are you sure?" } %>
+<li>
+<%= 
+          link_to 'Delete', 
+          article_path(@article),
+          data: { 
+            turbo_method: :delete, 
+            turbo_confirm: 'Are you sure you want to delete this article?' 
+            } 
+        %>
 </li>
 <li><%= link_to 'Back', root_path %></li>
+</div>
 </ul>
+
